@@ -35,12 +35,9 @@ form.addEventListener("submit", function (e) {
             const errorTitle = document.getElementById("errorTitle");
             const errorMessage = document.getElementById("errorMessage");
 
-            if (error && error.status === 404) {
-                errorTitle.textContent = "⚠️ Service or Template Not Found";
-                errorMessage.textContent = "Invalid EmailJS service ID or template ID. Please verify your credentials.";
-            } else if (error && error.status === 400) {
-                errorTitle.textContent = "⚠️ Invalid Public Key or Request";
-                errorMessage.textContent = "Your EmailJS public key may be invalid, or your form data is not matching your template fields.";
+            if (error && (error.status === 404 || error.status === 400)) {
+                errorTitle.textContent = "⚠️ Credentials Not Found";
+                errorMessage.textContent = "Invalid EmailJS service ID, template ID, or public key. Please verify your credentials.";
             } else if (error && error.status === 429) {
                 errorTitle.textContent = "⚠️ Quota Limit Reached";
                 errorMessage.textContent = "Your EmailJS sending quota has been exhausted. Please upgrade your plan or try again later.";
