@@ -9,10 +9,10 @@
 }
 
 :root {
-    --pry-color: #133917;
-    --sec-color: #105714;
-    --active-color: #21db34;
-    --overlay-color: rgba(19, 57, 23, 0.88);
+    --pry-color: #0b2545;
+    --sec-color: #113767;
+    --active-color: #2270cf;
+    --overlay-color: rgba(19, 32, 57, 0.88);
     --bg-color: linear-gradient(135deg, var(--pry-color), var(--sec-color));
 }
 
