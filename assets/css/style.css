@@ -11,10 +11,13 @@
 :root {
     --pry-color: #133917;
     --sec-color: #105714;
+    --active-color: #21db34;
+    --overlay-color: rgba(19, 57, 23, 0.88);
+    --bg-color: linear-gradient(135deg, var(--pry-color), var(--sec-color));
 }
 
 body {
-    background: linear-gradient(135deg, #133917, #1f4e23);
+    background: var(--bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,7 +59,7 @@ body {
 }
 
 .active {
-    color: #21db34;
+    color: var(--active-color);
 }
 
 .mail-container {
@@ -120,7 +123,7 @@ button:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(19, 57, 23, 0.88);
+    background: var(--overlay-color);
     display: none;
     justify-content: center;
     align-items: center;

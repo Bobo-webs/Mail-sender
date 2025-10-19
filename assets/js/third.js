@@ -1,6 +1,6 @@
 // Initialize EmailJS
 (function () {
-    emailjs.init("hq-f6gByPsTAERxIH");
+    emailjs.init(""); // public key here
 })();
 
 // Select elements
@@ -22,7 +22,7 @@ form.addEventListener("submit", function (e) {
         email: document.getElementById("email").value
     };
 
-    emailjs.send("service_c0oe0ti", "template_64ujovc", templateParams)
+    emailjs.send("service_", "template_", templateParams) // service & template ID here
         .then(function () {
             overlay.style.display = "none";
             openPopup("successPopup");

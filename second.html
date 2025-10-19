@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naki-Mail Sender</title>
+    <link rel="icon" href="/assets/img/logo.png">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+    <nav class="bottomnav">
+        <ul class="navbar-list">
+            <li><a href="index.html" class="navbar-link">KC</a></li>
+            <li><a href="second.html" class="navbar-link active">KC2</a></li>
+            <li><a href="third.html" class="navbar-link">JD</a></li>
+        </ul>
+    </nav>
+
+    <div class="mail-container">
+        <h2>KC2 Mail</h2>
+        <form id="mailForm">
+            <input type="text" id="name" placeholder="Enter your name" required />
+            <input type="text" id="address" placeholder="Enter your address" required />
+            <input type="email" id="email" placeholder="Enter your email" required />
+            <button type="submit">Send Mail</button>
+        </form>
+    </div>
+
+    <!-- ------------ Loading overlay ------------ -->
+    <div class="overlay" id="overlay">
+        <div class="spinner"></div>
+        <span>Sending mail...</span>
+    </div>
+
+    <!-- ------------ Popups --------------- -->
+    <div class="popup success" id="successPopup">
+        <h3>✅ Mail Sent Successfully!</h3>
+        <p>Your message was delivered to the recipient.</p>
+        <button onclick="closePopup('successPopup')">OK</button>
+    </div>
+
+    <div class="popup error" id="errorPopup">
+        <h3 id="errorTitle">⚠️ Error</h3>
+        <p id="errorMessage">Something went wrong. Please try again</p>
+        <button onclick="closePopup('errorPopup')">Try Again</button>
+    </div>
+
+    <!-- Popup Overlay -->
+    <div class="popup-overlay" id="popupOverlay"></div>
+
+
+    <!-- Scripts should go here -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="/assets/js/second.js"></script>
+</body>
+
+</html>
