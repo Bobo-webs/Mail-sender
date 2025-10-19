@@ -1,6 +1,6 @@
 // Initialize EmailJS
 (function () {
-    emailjs.init("PHtc00_xTfspVqqr-");
+    emailjs.init("hq-f6gByPsTAERxIH");
 })();
 
 // Select elements
